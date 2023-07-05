@@ -66,6 +66,9 @@ Interpret and Communicate Results and Recommendations
 The data used in this project,that has 20 columns and 21597 rows,was downloaded from [here](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction)
 , consists of information related to house sales. Here is a description for each column:
 
+Here is a snippet of the data used:
+
+![image](https://github.com/sogodongo/King-County-House/blob/master/Data%20Preview.png?raw=true)
 
 **id**: A unique identifier for each house.
 
