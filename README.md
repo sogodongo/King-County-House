@@ -1,11 +1,11 @@
-**Multiple Linear Regression Predictive Modeling for House Prices in King County**
+# Multiple Linear Regression Predictive Modeling for House Prices in King County
 
 by Sam Odongo
 
 **Presentation [here](https://docs.google.com/presentation/d/1zL_GFJgm1-n6oTwkgmK1RTXUnCPFPeDDRoDbj6gbEj4/edit#slide=id.gc6f980f91_0_0)**
 
 
-![image]([https://github.com/sogodongo/Phase-1-Project/assets/103502854/940eb443-2445-4739-9395-bcd21f4d33f3](https://github.com/sogodongo/King-County-House/blob/master/KC%20Housing%20Image.jpg)https://github.com/sogodongo/King-County-House/blob/master/KC%20Housing%20Image.jpg)
+![image](https://github.com/sogodongo/King-County-House/blob/master/KC%20Housing%20Image.jpg)
 
 
 
@@ -122,36 +122,42 @@ iv) Examination of Association of Waterfront feature with the Price
 ### b) Building a Mutiple Regression Model
 
   Feature Selection
-   Assumption
-   Multicollinearity
-   Linear relationship between explanatory and response variables
-   Homoscedasticity of error terms
-   Normal distribution of model residuals
+  
+   Assumptions
+   
+    + Multicollinearity
+   
+    + Linear relationship between explanatory and response variables
+   
+    + Homoscedasticity of error terms
+   
+    + Normal distribution of model residuals
+   
    Modelling
    
-### c)Model Validation
+### c) Model Validation
 
-### d)Interpretation of Model Results
+### d) Interpretation of Model Results
 
 ## 3.Conclusions
 
-_The multiple regression model demonstrates that approximately 53.4% of the variation in house prices can be explained by the included variables: the number of bathrooms, grade, square footage of living space, and square footage of the land lots of the nearest 15 neighbors (sqft_living15).
++ The multiple regression model demonstrates that approximately 53.4% of the variation in house prices can be explained by the included variables: the number of bathrooms, grade, square footage of living space, and square footage of the land lots of the nearest 15 neighbors (sqft_living15).
 
-_The highly significant F-statistic of 6000 indicates that the overall model is statistically significant, signifying that the combined effects of the independent variables significantly contribute to predicting house prices.
++ The highly significant F-statistic of 6000 indicates that the overall model is statistically significant, signifying that the combined effects of the independent variables significantly contribute to predicting house prices.
 
-_The coefficients offer valuable insights into the relationship between the independent variables and house prices:
++ The coefficients offer valuable insights into the relationship between the independent variables and house prices:
 
-_Each additional bathroom is associated with a decrease of $22,800 in house price, holding other factors constant
++ Each additional bathroom is associated with a decrease of $22,800 in house price, holding other factors constant
 
-_A higher grade is linked to a higher house price, with each unit increase in grade leading to an increase of $187,900 in price.
++ A higher grade is linked to a higher house price, with each unit increase in grade leading to an increase of $187,900 in price.
 
-_An increase in the square footage of living space is associated with a higher house price, with each unit increase resulting in an increase of $362,100 in price.
++ An increase in the square footage of living space is associated with a higher house price, with each unit increase resulting in an increase of $362,100 in price.
 
-_More square footage of interior housing living space among the nearest 15 neighbors (sqft_living15) is connected to a higher house price, with each unit increase leading to an increase of $183,000 in price.
++ More square footage of interior housing living space among the nearest 15 neighbors (sqft_living15) is connected to a higher house price, with each unit increase leading to an increase of $183,000 in price.
 
-_The normality assumption of the model is satisfied based on the QQ-plot of the model residuals. Additionally, the scatter plot of residuals vs predicted values indicates that the residuals are centered around zero and exhibit random patterns, suggesting that the linear regression assumptions are reasonably met.
++ The normality assumption of the model is satisfied based on the QQ-plot of the model residuals. Additionally, the scatter plot of residuals vs predicted values indicates that the residuals are centered around zero and exhibit random patterns, suggesting that the linear regression assumptions are reasonably met.
 
-_The MSE values suggest that the multiple regression model is capturing some of the variation in the target variable, but there is still room for improvement. It's important to consider additional evaluation metrics and potentially explore other modeling approaches to further optimize the model's performance.
++ The MSE values suggest that the multiple regression model is capturing some of the variation in the target variable, but there is still room for improvement. It's important to consider additional evaluation metrics and potentially explore other modeling approaches to further optimize the model's performance.
 
 ## 4.Recommenations
 
