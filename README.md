@@ -9,6 +9,21 @@ by Sam Odongo
 
 
 
+
+# Overview
+
+This project focuses on developing a multiple linear regression model for predicting house prices in King County. Accurate price estimation is crucial in the real estate market for both buyers and sellers to make informed decisions. By leveraging the King County House Sales dataset and employing data visualization and comprehensive analysis techniques, the project aims to identify the key factors that significantly impact house prices and build a reliable regression model.
+
+The main objective is to develop a predictive model that accurately estimates house prices based on various features. The model will consider multiple variables and utilize regression algorithms and feature selection techniques to determine the most influential predictors of house prices in the King County housing market.
+
+To assess the model's performance, relevant metrics such as mean absolute error (MAE), root mean square error (RMSE), and R-squared will be utilized. A successful model will demonstrate low MAE and RMSE values, indicating accurate predictions, and a high R-squared value, indicating a high percentage of variance explained by the model.
+
+The project follows a structured experimental design that involves data understanding, exploration, and preparation. Feature selection techniques will be applied to identify the most relevant variables for the regression model. The model will be fitted, and the coefficients will be interpreted to evaluate the model's fit. Model validation will be performed to assess its predictive performance. Finally, the results and recommendations will be interpreted and communicated effectively to provide actionable insights to stakeholders in the real estate industry.
+
+Thus,this project aims to provide a reliable and accurate predictive model for house prices in King County, enabling buyers, sellers, and real estate professionals to make informed decisions based on the model's insights and recommendations.
+
+
+
 # 1. Business Understanding
 ##  a) Introduction
 
@@ -124,7 +139,7 @@ iv) Examination of Association of Waterfront feature with the Price
 
 ### b) Building a Mutiple Regression Model
 
-  Feature Selection
+ Feature Selection
   
    Assumptions
    
@@ -136,31 +151,64 @@ iv) Examination of Association of Waterfront feature with the Price
    
     + Normal distribution of model residuals
    
-   Modelling
+ Modelling
+   
+Selected Feautures;For the Model I selected 4 feautures that had the highest correlation with price and did not violate the multocorrelianity assumption:
+
++ grade
++ bathrooms
++ sqft_living15
++ sqft_living
    
 ### c) Model Validation
 
+
+
 ### d) Interpretation of Model Results
+
+![image](https://github.com/sogodongo/King-County-House/blob/master/Model%20Results%20Image.png)
+
++ The model has an R-squared value of 0.534, indicating that approximately 53.4% of the variation in house prices can be explained by the included variables: bathrooms, grade, square footage of living space, and square footage of interior housing living space for the nearest 15 neighbors(sqft_living15).
+
++ The highly significant F-statistic of 6000 suggests that the overall model is statistically significant, meaning that the combined effects of the independent variables significantly contribute to predicting house prices.
+
++ The intercept coefficient (const) is estimated to be 8.1050, indicating that when all other variables are zero, the average price of a house is estimated to be $8.1050 million.
+
++ The coefficient for the number of bathrooms (bathrooms) is -0.0228, indicating that, on average, each additional bathroom is associated with a decrease of $22,800 in house price, holding other factors constant.
+
++ The coefficient for the grade of the house (grade) is 0.1879, suggesting that a higher grade is associated with a higher house price. Each unit increase in grade leads to an increase of $187,900 in price.
+
++ The coefficient for the square footage of living space (sqft_living) is 0.3621, indicating that an increase in the square footage of living space is associated with a higher house price. Each unit increase in square footage leads to an increase of $362,100 in price.
+
++ The coefficient for the square footage of interior housing living space for the nearest 15 neighbors (sqft_living15) is 0.1830, suggesting that more living space among the nearest 15 neighbors is associated with a higher house price. Each unit increase in sqft_living15 leads to an increase of $183,000 in price.
+
++ The standard errors associated with these coefficients provide a measure of the precision of the estimates. The low p-values indicate that all the coefficients are statistically significant, suggesting that they have a significant impact on house prices.
+
+The analysis reveals that a higher grade, less bathrooms, and larger square footage of living space and interior living space among of the nearest 15 neighbors are associated with higher house prices. 
+
+
 
 ## 3.Conclusions
 
-+ The multiple regression model demonstrates that approximately 53.4% of the variation in house prices can be explained by the included variables: the number of bathrooms, grade, square footage of living space, and square footage of the land lots of the nearest 15 neighbors (sqft_living15).
+
++ The multiple regression model demonstrates that approximately 53.4% of the variation in house prices can be explained by the included variables: the number of bathrooms, grade, square footage of living space, and square footage of interior housing living space for the nearest 15 neighbors.
 
 + The highly significant F-statistic of 6000 indicates that the overall model is statistically significant, signifying that the combined effects of the independent variables significantly contribute to predicting house prices.
 
 + The coefficients offer valuable insights into the relationship between the independent variables and house prices:
 
-+ Each additional bathroom is associated with a decrease of $22,800 in house price, holding other factors constant
+     + Each additional bathroom is associated with a decrease of $22,800 in house price, holding other factors constant
 
-+ A higher grade is linked to a higher house price, with each unit increase in grade leading to an increase of $187,900 in price.
+     + A higher grade is linked to a higher house price, with each unit increase in grade leading to an increase of $187,900 in price.
 
-+ An increase in the square footage of living space is associated with a higher house price, with each unit increase resulting in an increase of $362,100 in price.
+     + An increase in the square footage of living space is associated with a higher house price, with each unit increase resulting in an increase of $362,100 in price.
 
 + More square footage of interior housing living space among the nearest 15 neighbors (sqft_living15) is connected to a higher house price, with each unit increase leading to an increase of $183,000 in price.
 
-+ The normality assumption of the model is satisfied based on the QQ-plot of the model residuals. Additionally, the scatter plot of residuals vs predicted values indicates that the residuals are centered around zero and exhibit random patterns, suggesting that the linear regression assumptions are reasonably met.
++ The normality assumption of the model is satisfied based on the QQ-plot of the model residuals. Additionally, the scatter plot of residuals vs predicted values indicates that the residuals are centered around zero and exhibit random patterns, suggesting that the multiple linear regression assumptions are reasonably met.
 
-+ The low MSE and RMSE values demonstrate the success of this multiple linear regression model in predicting house prices in the King County housing market. These results provide confidence in the model's ability to estimate house prices accurately, which can be valuable for buyers, sellers, and real estate professionals in making informed decisions in the real estate market.
++ The low MSE and RMSE values demonstrate the success of this model in predicting house prices in the King County housing market. These results provide confidence in the model's ability to estimate house prices accurately, which can be valuable for buyers, sellers, and real estate professionals in making informed decisions in the real estate market.
+
 
 ## 4.Recommenations
 
