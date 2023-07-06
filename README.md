@@ -160,7 +160,7 @@ iv) Examination of Association of Waterfront feature with the Price
 
 + The normality assumption of the model is satisfied based on the QQ-plot of the model residuals. Additionally, the scatter plot of residuals vs predicted values indicates that the residuals are centered around zero and exhibit random patterns, suggesting that the linear regression assumptions are reasonably met.
 
-+ The MSE values suggest that the multiple regression model is capturing some of the variation in the target variable, but there is still room for improvement. It's important to consider additional evaluation metrics and potentially explore other modeling approaches to further optimize the model's performance.
++ The low MSE and RMSE values demonstrate the success of this multiple linear regression model in predicting house prices in the King County housing market. These results provide confidence in the model's ability to estimate house prices accurately, which can be valuable for buyers, sellers, and real estate professionals in making informed decisions in the real estate market.
 
 ## 4.Recommenations
 
@@ -178,9 +178,11 @@ _To Data Professionals_
 
 + The model assumes linearity and other assumptions of multiple regression. When making predictions or drawing conclusions, it is crucial to consider these assumptions and their potential limitations.
 
-+ Regularly assess and validate the model's performance using metrics such as mean squared error. This will help gauge the accuracy and predictive power of the model and identify any potential areas for improvement.
++ Regularly assess and validate the model's performance using metrics such as MSE. This will help gauge the accuracy and predictive power of the model and identify any potential areas for improvement.
 
-+ Keep in mind that other factors beyond those included in the model may also influence house prices. Consider incorporating additional variables or exploring alternative models to capture a more comprehensive understanding of house price dynamics in the real estate domain.
++ There is still room for improvement. It is important to consider additional evaluation metrics and potentially explore other modeling approaches to further optimize the model's performance.
+
++ Other factors beyond those included in the model may also influence house prices. Consider incorporating additional variables or exploring alternative models to capture a more comprehensive understanding of house price dynamics in the real estate domain.
 
 
 
