@@ -139,7 +139,7 @@ iv) Examination of Association of Waterfront feature with the Price
 
 ### b) Building a Mutiple Regression Model
 
- Feature Selection
+ *Feature Selection*
   
    Assumptions
    
@@ -151,22 +151,63 @@ iv) Examination of Association of Waterfront feature with the Price
    
     + Normal distribution of model residuals
    
- Modelling
-   
+      
 Selected Feautures;For the Model I selected 4 feautures that had the highest correlation with price and did not violate the multocorrelianity assumption:
 
 + grade
 + bathrooms
 + sqft_living15
 + sqft_living
+
+   
+ *Modelling*
+ 
+#Creating a new DataFrame with the selected variables
+selected_vars = ['bathrooms', 'grade', 'sqft_living', 'sqft_living15']
+df_selected = df_encoded[selected_vars].copy()
+​
+#Updating the target variable 'price' and the sqft variables to their natural logarithm
+df_selected['price'] = np.log(df_encoded['price'])
+df_selected['sqft_living'] = np.log(df_encoded['sqft_living'])
+df_selected['sqft_living15'] = np.log(df_encoded['sqft_living15'])
+​
+#Performing ordinal encoding on the 'grade' column
+encoder = OrdinalEncoder()
+df_selected['grade'] = encoder.fit_transform(df_selected[['grade']])
+​
+#Converting the data types of the columns to numeric
+df_selected = df_selected.astype({'bathrooms': float, 'grade': float, 'sqft_living': float, 'sqft_living15': float})
+​
+#Adding a constant column to the DataFrame for the intercept term in the regression model
+df_selected = sm.add_constant(df_selected)
+​
+#Fitting the multiple regression model
+model = sm.OLS(df_selected['price'], df_selected.drop('price', axis=1))
+results = model.fit()
+
+ *Model Results*
+
+![image](https://github.com/sogodongo/King-County-House/blob/master/Model%20Results%20Image.png)
    
 ### c) Model Validation
 
+ MSE
+ 
+Train Mean Squared Error: 0.1222337541382977
+Test Mean Squared Error: 0.1264896495280169
 
+ RMSE
+ 
+Train Root Mean Squared Error: 0.34961944187687516
+Test Root Mean Squared Error: 0.35565383384411436
+
+
+The low MSE and RMSE values denote the success of this model in predicting house prices
+The difference between the two MSE/RMSE values is relatively small, indicating that the model's performance is consistent across both the training and testing sets.
 
 ### d) Interpretation of Model Results
 
-![image](https://github.com/sogodongo/King-County-House/blob/master/Model%20Results%20Image.png)
+
 
 + The model has an R-squared value of 0.534, indicating that approximately 53.4% of the variation in house prices can be explained by the included variables: bathrooms, grade, square footage of living space, and square footage of interior housing living space for the nearest 15 neighbors(sqft_living15).
 
@@ -207,7 +248,7 @@ The analysis reveals that a higher grade, less bathrooms, and larger square foot
 
 + The normality assumption of the model is satisfied based on the QQ-plot of the model residuals. Additionally, the scatter plot of residuals vs predicted values indicates that the residuals are centered around zero and exhibit random patterns, suggesting that the multiple linear regression assumptions are reasonably met.
 
-+ The low MSE and RMSE values demonstrate the success of this model in predicting house prices in the King County housing market. These results provide confidence in the model's ability to estimate house prices accurately, which can be valuable for buyers, sellers, and real estate professionals in making informed decisions in the real estate market.
++ The low MSE and RMSE values demonstrate the success of this model in predicting house prices in the King County housing market. These results provide confidence in the model's ability to estimate house prices accurately, which can be valuable for buyers, sellers, and real estate professionals in making informed decisions in the real estate market.The difference between the two MSE/RMSE values is relatively small, indicating that the model's performance is consistent across both the training and testing sets.
 
 
 ## 4.Recommenations
