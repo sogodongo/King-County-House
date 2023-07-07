@@ -133,11 +133,14 @@ Here is a snippet of the data used:
 ### a) Examining the Target Variable, 'Price'
 
  i) Examining the Correlation between Features and Price
+ 
 ii) Examination of Association of Ordinal Features with the Target Variable, Price
+
 iii) Examination of Association of Continuous Features with the Price¶
+
 iv) Examination of Association of Waterfront feature with the Price
 
-### b) Building a Mutiple Regression Model
+### b) Building a Mutiple Linear Regression Model
 
  *Feature Selection*
   
@@ -182,7 +185,7 @@ Selected Feautures;For the Model I selected 4 feautures that had the highest cor
      
     Converted the data types of the columns to numeric:
 
-     The data types of the columns 'bathrooms', 'grade', 'sqft_living', and 'sqft_living15' are converted to float to ensure consistency and          compatibility with the regression model.
+     The data types of the columns 'bathrooms', 'grade', 'sqft_living', and 'sqft_living15' are converted to float to ensure consistency and ompatibility with the regression model.
      
     Added a constant column to the DataFrame:
 
@@ -270,7 +273,7 @@ The analysis reveals that a higher grade, less bathrooms, and larger square foot
 
 ## 4.Recommenations
 
-_To Consumers/Investors/_.
+_Consumers/Investors_
 
 + When evaluating house prices, consider the factors included in the multiple regression model: number of bathrooms, grade, square footage of living space, and square footage of the land lots of the nearest 15 neighbors (sqft_living15).
 
@@ -280,7 +283,7 @@ _To Consumers/Investors/_.
 
 + While the model indicates that more bathrooms are associated with lower prices, it is important to consider other factors and individual preferences. Some buyers may value additional bathrooms, so it's essential to evaluate the overall appeal and functionality of a property.
 
-_To Data Professionals_
+_Data Professionals_
 
 + The model assumes linearity and other assumptions of multiple regression. When making predictions or drawing conclusions, it is crucial to consider these assumptions and their potential limitations.
 
