@@ -162,9 +162,9 @@ Selected Feautures;For the Model I selected 4 feautures that had the highest cor
    
  *Modelling*
  
-    Methodology for Creating the Multiple Linear Regression Model
+   *Methodology for Creating the Multiple Linear Regression Model*
     
-     Created a new DataFrame with the selected variables:
+    Created a new DataFrame with the selected variables:
 
      The variables 'bathrooms', 'grade', 'sqft_living', and 'sqft_living15' are chosen as the predictors for the regression model.
      A new DataFrame called 'df_selected' is created to store these selected variables.
