@@ -163,12 +163,15 @@ Selected Feautures;For the Model I selected 4 feautures that had the highest cor
  *Modelling*
  
 #Creating a new DataFrame with the selected variables
+
 selected_vars = ['bathrooms', 'grade', 'sqft_living', 'sqft_living15']
 df_selected = df_encoded[selected_vars].copy()
 
 
 ​
 #Updating the target variable 'price' and the sqft variables to their natural logarithm
+
+
 df_selected['price'] = np.log(df_encoded['price'])
 df_selected['sqft_living'] = np.log(df_encoded['sqft_living'])
 df_selected['sqft_living15'] = np.log(df_encoded['sqft_living15'])
@@ -176,6 +179,7 @@ df_selected['sqft_living15'] = np.log(df_encoded['sqft_living15'])
 
 ​
 #Performing ordinal encoding on the 'grade' column
+
 encoder = OrdinalEncoder()
 df_selected['grade'] = encoder.fit_transform(df_selected[['grade']])
 
@@ -183,16 +187,19 @@ df_selected['grade'] = encoder.fit_transform(df_selected[['grade']])
 
 ​
 #Converting the data types of the columns to numeric
+
 df_selected = df_selected.astype({'bathrooms': float, 'grade': float, 'sqft_living': float, 'sqft_living15': float})
 
 
 ​
 #Adding a constant column to the DataFrame for the intercept term in the regression model
+
 df_selected = sm.add_constant(df_selected)
 
 
 ​
 #Fitting the multiple regression model
+
 model = sm.OLS(df_selected['price'], df_selected.drop('price', axis=1))
 results = model.fit()
 
@@ -202,19 +209,23 @@ results = model.fit()
    
 ### c) Model Validation
 
- MSE
+ *MSE*
  
 Train Mean Squared Error: 0.1222337541382977
+
 Test Mean Squared Error: 0.1264896495280169
 
- RMSE
+ *RMSE*
  
 Train Root Mean Squared Error: 0.34961944187687516
+
 Test Root Mean Squared Error: 0.35565383384411436
 
 
 The low MSE and RMSE values denote the success of this model in predicting house prices
 The difference between the two MSE/RMSE values is relatively small, indicating that the model's performance is consistent across both the training and testing sets.
+
+
 
 ### d) Interpretation of Model Results
 
