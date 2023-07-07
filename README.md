@@ -162,35 +162,41 @@ Selected Feautures;For the Model I selected 4 feautures that had the highest cor
    
  *Modelling*
  
-    + #Creating a new DataFrame with the selected variables
-
-      selected_vars = ['bathrooms', 'grade', 'sqft_living', 'sqft_living15']
-      df_selected = df_encoded[selected_vars].copy()
-
-    + #Updating the target variable 'price' and the sqft variables to their natural logarithm
+    Methodology for Creating the Multiple Linear Regression Model
     
-      df_selected['price'] = np.log(df_encoded['price'])
-      df_selected['sqft_living'] = np.log(df_encoded['sqft_living'])
-      df_selected['sqft_living15'] = np.log(df_encoded['sqft_living15'])
+     Created a new DataFrame with the selected variables:
 
-    + #Performing ordinal encoding on the 'grade' column
+     The variables 'bathrooms', 'grade', 'sqft_living', and 'sqft_living15' are chosen as the predictors for the regression model.
+     A new DataFrame called 'df_selected' is created to store these selected variables.
+     
+     Updated the target variable and the sqft variables to their natural logarithm:
 
-      encoder = OrdinalEncoder()
-      df_selected['grade'] = encoder.fit_transform(df_selected[['grade']])
+     The target variable 'price' is transformed using the natural logarithm.
+     The variables 'sqft_living' and 'sqft_living15' are also transformed using the natural logarithm.
+     Taking the logarithm can help to normalize the data and improve the model's performance.
+     
+    Performed ordinal encoding on the 'grade' column:
 
+     The 'grade' column, which represents an ordinal feature, is encoded using the OrdinalEncoder.
+     Ordinal encoding assigns a numerical value to each category based on its order or rank.
+     
+    Converted the data types of the columns to numeric:
 
-    + #Converting the data types of the columns to numeric
+     The data types of the columns 'bathrooms', 'grade', 'sqft_living', and 'sqft_living15' are converted to float to ensure consistency and          compatibility with the regression model.
+     
+    Added a constant column to the DataFrame:
 
-      df_selected = df_selected.astype({'bathrooms': float, 'grade': float, 'sqft_living': float, 'sqft_living15': float})
+    A constant column is added to the DataFrame using the sm.add_constant() function.
+    This constant column represents the intercept term in the regression model.
+    
+    Fitting the multiple regression model:
 
-     + #Adding a constant column to the DataFrame for the intercept term in the regression model
+    The multiple regression model was then fitted using the Ordinary Least Squares (OLS) method from the statsmodels library.
+    The target variable 'price' was regressed on the other predictor variables in the DataFrame.
+    The results of the regression model were then stored in the 'results' variable.
+    
+By following these steps, the code prepared the data and fitted a multiple regression model to predict house prices based on the selected variables. The regression results were further analyzed and interpreted to understand the relationships between the predictors and the target variable.
 
-      df_selected = sm.add_constant(df_selected)
-
-    + #Fitting the multiple regression model
-
-      model = sm.OLS(df_selected['price'], df_selected.drop('price', axis=1))
-      results = model.fit()
 
  *Model Results*
 
