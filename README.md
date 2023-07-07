@@ -165,21 +165,32 @@ Selected Feautures;For the Model I selected 4 feautures that had the highest cor
 #Creating a new DataFrame with the selected variables
 selected_vars = ['bathrooms', 'grade', 'sqft_living', 'sqft_living15']
 df_selected = df_encoded[selected_vars].copy()
+
+
 ​
 #Updating the target variable 'price' and the sqft variables to their natural logarithm
 df_selected['price'] = np.log(df_encoded['price'])
 df_selected['sqft_living'] = np.log(df_encoded['sqft_living'])
 df_selected['sqft_living15'] = np.log(df_encoded['sqft_living15'])
+
+
 ​
 #Performing ordinal encoding on the 'grade' column
 encoder = OrdinalEncoder()
 df_selected['grade'] = encoder.fit_transform(df_selected[['grade']])
+
+
+
 ​
 #Converting the data types of the columns to numeric
 df_selected = df_selected.astype({'bathrooms': float, 'grade': float, 'sqft_living': float, 'sqft_living15': float})
+
+
 ​
 #Adding a constant column to the DataFrame for the intercept term in the regression model
 df_selected = sm.add_constant(df_selected)
+
+
 ​
 #Fitting the multiple regression model
 model = sm.OLS(df_selected['price'], df_selected.drop('price', axis=1))
