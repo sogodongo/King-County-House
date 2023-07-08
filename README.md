@@ -149,6 +149,29 @@ Selected Feautures;For the Model I selected 4 feautures that had the highest cor
 
    
  *Modelling*
+
+The formula for the regression model is
+
+                        Y = β0 + β1X1 + β2X2 + ... + βn*Xn + ε
+Where:
+
+Y is the dependent variable (in this project, it is the house price).
+
+β0 is the intercept term, representing the value of Y when all predictor variables are zero.
+
+β1, β2, ..., βn are the regression coefficients, representing the change in Y associated with a one-unit change in each
+
+respective predictor variable.
+
+X1, X2, ..., Xn are the predictor variables (in this project, they could be variables like grade, bathrooms, square footage, etc.).
+
+ε is the error term, representing the random variability or unexplained part of Y not accounted for by the predictor variables.
+
+Thus the multiple regression formula is:
+
+                  Price = β0 + β1Grade + β2Bathrooms + β3Sqft_living15 + β4Sqft_living + ε
+The goal of the multiple regression analysis is to estimate the regression coefficients (β0, β1, β2, β3, β4) that provide the best fit to the data, enabling accurate predictions of house prices based on the selected predictor variables.
+
  
    *Methodology for Creating the Multiple Linear Regression Model*
     
