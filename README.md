@@ -2,7 +2,7 @@
 
 by Sam Odongo
 
-**Presentation [here](https://docs.google.com/presentation/d/1zL_GFJgm1-n6oTwkgmK1RTXUnCPFPeDDRoDbj6gbEj4/edit#slide=id.gc6f980f91_0_0)**
+**Presentation [here](https://docs.google.com/presentation/d/1RhmLldi_kVvGLcKcxffPrE4OCN4I8RmF5CchURWvs4c/edit#slide=id.g257fd26b1fe_0_186)**
 
 
 ![image](https://github.com/sogodongo/King-County-House/blob/master/KC%20Housing%20Image.jpg)
