@@ -66,66 +66,51 @@ The developed model should be interpretable and provide actionable insights. It 
 ## e) Experimental Design
 
 Data Understanding
+
 Data Exploration and Preparation
+
 Feature Selection
+
 Modelling
+
 Fitting the Model
+
 Interpretation of Coefficients and Evaluation of Modet Fit
+
 Model Validation
+
 Interpret and Communicate Results and Recommendations
 
 
 
 ##  f) Data Understanding
 
-The data used in this project,that has 20 columns and 21597 rows,was downloaded from [here](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction)
-, consists of information related to house sales. Here is a description for each column:
+The data used in this project,that has 20 columns and 21597 rows,was downloaded from [here](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction), consists of information related to house sales. Here is a description for each column:
 
-Here is a snippet of the data used:
 
-![image](https://github.com/sogodongo/King-County-House/blob/master/Data%20Preview.png?raw=true)
-
-**id**: A unique identifier for each house.
-
-**date**: The date when the house was sold.
-
-**price**: The target variable representing the price of the house.
-
-**bedrooms**: The number of bedrooms in the house.
-
-**bathrooms**: The number of bathrooms in the house.
-
-**sqft_living**: The square footage of the home.
-
-**sqft_lot**: The square footage of the lot.
-
-**floors**: The total number of floors in the house.
-
-**waterfront**: Indicates whether the house has a view to a waterfront.
-
-**view**: Indicates whether the house has been viewed.
-
-**condition**: Represents the overall condition of the house.
-
-**grade**: Represents the overall grade given to the housing unit based on the King County grading system.
-
-**sqft_above**: The square footage of the house apart from the basement.
-
-**sqft_basement**: The square footage of the basement.
-
-**yr_built**: The year the house was built.
-
-**yr_renovated**: The year when the house was renovated.
-
-**zipcode**: The zip code of the house's location.
-
-**lat**: The latitude coordinate of the house's location.
-
-**long**: The longitude coordinate of the house's location.
-
-**sqft_living15**: The square footage of interior housing living space for the nearest 15 neighbors.
-
-**sqft_lot15**: The square footage of the land lots of the nearest 15 neighbors.
+| Variable     | Description                                                 |
+|--------------|-------------------------------------------------------------|
+| id           | A unique identifier for each house                           |
+| date         | The date when the house was sold                             |
+| price        | The target variable representing the price of the house      |
+| bedrooms     | The number of bedrooms in the house                          |
+| bathrooms    | The number of bathrooms in the house                         |
+| sqft_living  | The square footage of the home                               |
+| sqft_lot     | The square footage of the lot                                |
+| floors       | The total number of floors in the house                      |
+| waterfront   | Indicates whether the house has a view to a waterfront       |
+| view         | Indicates whether the house has been viewed                  |
+| condition    | Represents the overall condition of the house                |
+| grade        | Represents the overall grade given to the housing unit       |
+| sqft_above   | The square footage of the house apart from the basement      |
+| sqft_basement| The square footage of the basement                           |
+| yr_built     | The year the house was built                                 |
+| yr_renovated | The year when the house was renovated                        |
+| zipcode      | The zip code of the house's location                         |
+| lat          | The latitude coordinate of the house's location              |
+| long         | The longitude coordinate of the house's location             |
+| sqft_living15| The square footage of interior housing living space for the nearest 15 neighbors |
+| sqft_lot15   | The square footage of the land lots of the nearest 15 neighbors |
 
 
 ## 2.Exploratory Data Analysis
