@@ -167,7 +167,7 @@ X1, X2, ..., Xn are the predictor variables (in this project, they could be vari
 
 ε is the error term, representing the random variability or unexplained part of Y not accounted for by the predictor variables.
 
-Thus the multiple regression formula is:
+Thus, the multiple regression formula is:
 
                   Price = β0 + β1Grade + β2Bathrooms + β3Sqft_living15 + β4Sqft_living + ε
 The goal of the multiple regression analysis is to estimate the regression coefficients (β0, β1, β2, β3, β4) that provide the best fit to the data, enabling accurate predictions of house prices based on the selected predictor variables.
@@ -291,7 +291,7 @@ _Consumers/Investors_
 
 + While the model indicates that more bathrooms are associated with lower prices, it is important to consider other factors and individual preferences. Some buyers may value additional bathrooms, so it's essential to evaluate the overall appeal and functionality of a property.
 
-_Data Professionals_
+_Data Professionals(Future Work)_
 
 + The model assumes linearity and other assumptions of multiple regression. When making predictions or drawing conclusions, it is crucial to consider these assumptions and their potential limitations.
 
